@@ -1,55 +1,94 @@
-import { Callout, Tab, Tabs } from 'nextra-theme-docs'
-
-import ApiExplanation from '../components/ApiExplanation'
-import Code from '../components/Code'
-
 # API Documentation
-<ApiExplanation/>
+
 Welcome to the RankGun API, the ultimate solution for managing ranks directly from Roblox Studio! Our API is designed to provide a seamless and efficient way to handle ranking operations within your Roblox workspace.
 
 Base URL: https://api.rankgun.works/
 
 ## Endpoints
-### Promote
-<Code code="POST /ranking/promote"/>
+
+### Ranking Endpoints
+
+#### Promote
+
+```
+POST /ranking/promote
+```
 
 Promote a user to the next rank in your workspace.
 
-### Demote
-<Code code="POST /ranking/demote"/>
+**Parameters:**
+
+* `workspace_id` (integer, required): The ID of your Roblox workspace.
+* `username` (string, optional): The username of the target user.
+* `user_id` (integer, optional): The user ID of the target user.
+* `api-token` (string, required, header): Your API token for authentication.
+
+#### Demote
+
+```
+POST /ranking/demote
+```
+
 Demote a user to the previous rank in your workspace.
 
-### Set Rank
-<Code code="POST /ranking/set-rank"/>
+**Parameters:**
+
+* `workspace_id` (integer, required): The ID of your Roblox workspace.
+* `username` (string, optional): The username of the target user.
+* `user_id` (integer, optional): The user ID of the target user.
+* `api-token` (string, required, header): Your API token for authentication.
+
+#### Set Rank
+
+```
+POST /ranking/set-rank
+```
 
 Set a specific rank for a user in your workspace.
 
-### Exile
-<Code code="POST /ranking/exile"/>
+**Parameters:**
+
+* `workspace_id` (integer, required): The ID of your Roblox workspace.
+* `rank` (integer, required): The desired rank for the user.
+* `username` (string, optional): The username of the target user.
+* `user_id` (integer, optional): The user ID of the target user.
+* `api-token` (string, required, header): Your API token for authentication.
+
+#### Exile
+
+```
+POST /ranking/exile
+```
 
 Exile a user from your workspace.
 
-### Shout
-<Code code="POST /utils/shout"/>
+**Parameters:**
+
+* `workspace_id` (integer, required): The ID of your Roblox workspace.
+* `username` (string, optional): The username of the target user.
+* `user_id` (integer, optional): The user ID of the target user.
+* `api-token` (string, required, header): Your API token for authentication.
+
+#### Shout
+
+```
+POST /utils/shout
+```
 
 Send a shout message to your workspace.
 
+**Parameters:**
+
+* `workspace_id` (integer, required): The ID of your Roblox workspace.
+* `shout_text` (string, required): The text of the shout message.
+* `api-token` (string, required, header): Your API token for authentication.
+
 ## Authentication
-All API endpoints require an API token for authentication. The token should be passed as a header with the key api-token.
 
-## Parameters
-All endpoints accept the following parameters:
-
-* <b>workspace_id</b> (integer): The ID of your Roblox workspace.
-* <b>username</b> (string): The username of the target user.
-* <b>user_id</b> (integer): The user ID of the target user.
-
-For the Set Rank and Shout endpoints, additional parameters are required:
-
-* <b>rank</b> (integer): The desired rank for the Set Rank endpoint.
-* <b>shout_text</b> (string): The text of the shout message for the Shout endpoint.
+All API endpoints require an API token for authentication. The token should be passed as a header with the key `api-token`.
 
 ## Responses
+
 A successful API request will return a status code of 200 and a JSON response. If there is a validation error, a status code of 422 will be returned, along with an error message.
 
 For more information on how to use our API, please refer to the example codes provided down below. We hope RankGun's API helps you manage your Roblox workspace effectively and efficiently. If you have any questions or need assistance, feel free to reach out to our support team.
@@ -67,7 +106,7 @@ local response = HttpService:GetAsync(BaseUrl.."/status")
 local data = HttpService:JSONDecode(response)
 print(data)
 
-````
+```
 
 <Callout type="warning" emoji="⚠️">
   Please make sure ``HTTP service`` is enabled, otherwise, you can **not** send requests to Roblox.
@@ -84,7 +123,7 @@ BaseUrl = "https://api.rankgun.works"
 Response = requests.get(f"{BaseUrl}/status")
 Data =  Response.json()
 print(Data)
-````
+```
 
 This should return `Success`.
 </Tab>
@@ -107,7 +146,6 @@ https.get(`${baseUrl}/status`, (res) => {
 
 
 ```
-
 
 This should return ``Success``.
   </Tab>
@@ -139,7 +177,6 @@ System.out.println(response);
 }
 }
 ```
-
 
 This should return ``Success``.
 
@@ -174,7 +211,6 @@ fmt.Println(string(body))
 }
 ```
 
-
 This should return ``Success``.
 
 <Callout type="warning" emoji="⚠️">
@@ -207,4 +243,3 @@ This should return ``Success``.
   ``brew install jq``
   </Tab>
 </Tabs>
-
