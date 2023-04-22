@@ -105,6 +105,9 @@ For more information on how to use our API, please refer to the example codes pr
 
 <Tabs items={['Roblox', 'Python', 'JavaScript', 'Java', 'Go', 'Bash']}>
 <Tab>
+  <Callout type="warning" emoji="⚠️">
+  Please make sure ``HTTP service`` is enabled, otherwise, you can **not** send requests to Roblox.
+</Callout>
 ```lua copy
 local HttpService = game:GetService("HttpService")
 
@@ -116,9 +119,7 @@ print(data)
 
 ```
 
-<Callout type="warning" emoji="⚠️">
-  Please make sure ``HTTP service`` is enabled, otherwise, you can **not** send requests to Roblox.
-</Callout>
+
 
 This should return ``Success``.
   </Tab>
@@ -158,6 +159,9 @@ https.get(`${baseUrl}/status`, (res) => {
 This should return ``Success``.
   </Tab>
   <Tab>
+    <Callout type="warning" emoji="⚠️">
+  Note that this Java code does not parse the JSON response or print it to the console. If you want to do that, you will need to use a JSON parsing library and handle the response data accordingly.
+</Callout>
 ```java copy
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -188,11 +192,12 @@ System.out.println(response);
 
 This should return ``Success``.
 
-<Callout type="warning" emoji="⚠️">
-  Note that this Java code does not parse the JSON response or print it to the console. If you want to do that, you will need to use a JSON parsing library and handle the response data accordingly.
-</Callout>
+
   </Tab>
   <Tab>
+    <Callout type="warning" emoji="⚠️">
+  Note that this Go code does not parse the JSON response or print it to the console. If you want to do that, you will need to use a JSON parsing library and handle the response data accordingly.
+</Callout>
 ```go copy
 package main
 
@@ -221,9 +226,7 @@ fmt.Println(string(body))
 
 This should return ``Success``.
 
-<Callout type="warning" emoji="⚠️">
-  Note that this Go code does not parse the JSON response or print it to the console. If you want to do that, you will need to use a JSON parsing library and handle the response data accordingly.
-</Callout>
+
   </Tab>
   <Tab>
   Here is a Bash equivalent that uses curl to make the HTTP GET request and jq to parse the JSON response:
