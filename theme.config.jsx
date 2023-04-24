@@ -12,7 +12,6 @@ export default {
   sidebar: {
     defaultMenuCollapseLevel: 1,
   },
-  darkMode: false,
   toc: {
     title: "On this page",
     float: true,

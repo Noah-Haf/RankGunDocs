@@ -1,9 +1,9 @@
 import { Card, Divider, Text, Button, Radio } from '@geist-ui/core';
 import { useState, useEffect } from 'react';
-
+import { useTheme as useNextTheme } from 'next-themes'
 
 export default function Quiz(props) {
-  // initial states
+  const { theme } = useNextTheme()
   const [state, setState] = useState(null);
   const [disabled, setDisabled] = useState(false);
   const [response, setResponse] = useState("success");
@@ -44,18 +44,27 @@ export default function Quiz(props) {
     <>
       {loading && <div className='quiz-placeholder' style={{ width: '750px', height: '300px' }}></div>}
       {!loading && (
-        <div className='card-padding fade-in'>
-          <Card width="750px">
-            <Card.Content className='card-content'>
+        <div className='card-padding  fade-in'>
+          <Card width="750px" shadow type={theme}>
+            <Card.Content className='card-content '>
               <Text b my={0}>{props.Question}</Text>
             </Card.Content>
             <Divider h="1px" my={0} />
             <Card.Content>
-              <Radio.Group value={state} onChange={handler} disabled={disabled}>
-                {options.map((option, index) => (
-                  <Radio key={index} value={index + 1}>{option}</Radio>
-                ))}
-              </Radio.Group>
+              {theme === "light" ? (
+                <Radio.Group value={state}  onChange={handler} disabled={disabled}>
+                  {options.map((option, index) => (
+                    <Radio type="default" key={index} value={index + 1}>{option}</Radio>
+                  ))}
+                </Radio.Group>
+              ) : (
+                <Radio.Group value={state}  onChange={handler} disabled={disabled}>
+                  {options.map((option, index) => (
+                    <Radio type="success" key={index} value={index + 1} style={{ color: 'white' }}>{option}</Radio>
+                  ))}
+                </Radio.Group>
+              )}
+
               <div className='button-padding'>
                 {disabled ? (
                   response === "success" ? (
