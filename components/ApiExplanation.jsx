@@ -1,4 +1,4 @@
-import { Note, Avatar } from '@geist-ui/react';
+import { Note, Avatar } from '@geist-ui/core';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
