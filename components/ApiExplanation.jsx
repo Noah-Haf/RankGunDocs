@@ -1,19 +1,18 @@
-import { Note, Avatar } from '@geist-ui/core';
+import { Note, Avatar } from '@geist-ui/react';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
-export default function ApiExplanation() {
-  const [loading, setLoading] = useState(false);
+function RenderNote() {
   const { resolvedTheme } = useTheme();
 
-  const renderNote = () => (
+  return (
     <div className="note-padding">
       <Note
         type={resolvedTheme === 'dark' ? 'success' : 'default'}
         filled={resolvedTheme === 'dark'}
+        key={resolvedTheme}
       >
-        An application programming interface (API) is a way for two or more
-        computer programs to communicate with each other.
+        An application programming interface (API) is a way for two or more computer programs to communicate with each other.
         <br />
         <br />
         <Avatar
@@ -23,13 +22,17 @@ export default function ApiExplanation() {
       </Note>
     </div>
   );
+}
+
+export default function ApiExplanation() {
+  const [loading, setLoading] = useState(false);
 
   return (
     <>
       {loading ? (
         <div className="note-placeholder" style={{ height: '50px' }} />
       ) : (
-        renderNote()
+        <RenderNote />
       )}
       <style jsx>{`
         .note-placeholder {
