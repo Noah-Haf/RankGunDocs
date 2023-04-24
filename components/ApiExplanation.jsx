@@ -3,10 +3,8 @@ import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
 export default function ApiExplanation() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const { resolvedTheme } = useTheme();
-
-
 
   const renderNote = () => (
     <div className="note-padding">
