@@ -6,13 +6,7 @@ export default function ApiExplanation() {
   const [loading, setLoading] = useState(true);
   const { resolvedTheme } = useTheme();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
 
   const renderNote = () => (
     <div className="note-padding">
