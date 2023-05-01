@@ -8,10 +8,6 @@ export default {
   sidebar: {
     defaultMenuCollapseLevel: 1,
   },
-  i18n: [
-    { locale: 'en', text: 'English'},
-    {locale: 'de', text: 'Deutsch'},
-  ],
   toc: {
     title: "On this page",
     float: true,
