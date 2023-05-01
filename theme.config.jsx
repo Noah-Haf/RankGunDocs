@@ -1,10 +1,6 @@
 import React from 'react'
 
 
-function getRandomEmoji() {
-    const emojis = ['🍪', '🚀', '💡', '🤓', '🤔']
-    return emojis[Math.floor(Math.random() * emojis.length)]
-  }
 
 
 export default {
@@ -12,11 +8,15 @@ export default {
   sidebar: {
     defaultMenuCollapseLevel: 1,
   },
+  i18n: [
+    { locale: 'en', text: 'English'},
+    {locale: 'de', text: 'Deutsch'},
+  ],
   toc: {
     title: "On this page",
     float: true,
   },
-  faviconGlyph: getRandomEmoji(),
+  faviconGlyph: "🤓",
   logo: (
     <strong>Documentation</strong>
 

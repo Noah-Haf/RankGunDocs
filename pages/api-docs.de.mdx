@@ -1,0 +1,104 @@
+import { Callout, Tab, Tabs } from 'nextra-theme-docs'
+
+
+
+
+
+# API-Dokumentation
+
+<Callout type="info" emoji="🤓">
+  Eine Anwendungsprogrammierschnittstelle (API) ist eine Möglichkeit für zwei oder mehr Computerprogramme, miteinander zu kommunizieren.
+</Aufruf>
+
+Willkommen bei der RankGun API, der ultimativen Lösung für die Verwaltung von Rängen direkt in Roblox Studio! Unsere API wurde entwickelt, um einen nahtlosen und effizienten Weg zu bieten, um Ranglistenoperationen in Ihrem Roblox-Arbeitsbereich zu verwalten.
+
+Basis-URL: https://api.rankgun.works/
+
+## Endpunkte
+
+### Ranglisten-Endpunkte
+
+#### Befördern
+
+```
+POST /ranking/promote
+```
+
+Beförderung eines Benutzers auf den nächsten Rang in Ihrem Arbeitsbereich.
+
+**Parameter:**
+
+* `workspace_id` (ganze Zahl, erforderlich): Die ID Ihres Roblox-Arbeitsbereichs.
+* `Benutzername` (String, optional): Der Benutzername des Zielbenutzers.
+* User_id" (Ganzzahl, optional): Die Benutzer-ID des Zielbenutzers.
+* api-token" (String, erforderlich, Header): Ihr API-Token für die Authentifizierung.
+
+#### Abmelden
+
+```
+POST /ranking/demote
+```
+
+Rückstufung eines Benutzers auf den vorherigen Rang in Ihrem Arbeitsbereich.
+
+**Parameter:**
+
+* `workspace_id` (ganze Zahl, erforderlich): Die ID Ihres Roblox-Arbeitsbereichs.
+* `Benutzername` (String, optional): Der Benutzername des Zielbenutzers.
+* User_id" (Ganzzahl, optional): Die Benutzer-ID des Zielbenutzers.
+* api-token" (String, erforderlich, Header): Ihr API-Token für die Authentifizierung.
+
+#### Rang festlegen
+
+```
+POST /ranking/set-rank
+```
+
+Legt einen bestimmten Rang für einen Benutzer in Ihrem Arbeitsbereich fest.
+
+**Parameter:**
+
+* `workspace_id` (ganze Zahl, erforderlich): Die ID Ihres Roblox-Arbeitsbereichs.
+* `Rang` (ganze Zahl, erforderlich): Der gewünschte Rang des Benutzers.
+* `Benutzername` (String, optional): Der Benutzername des Zielbenutzers.
+* `user_id` (ganze Zahl, optional): Die Benutzer-ID des Zielbenutzers.
+* api-token" (String, erforderlich, Header): Ihr API-Token für die Authentifizierung.
+
+#### Exil
+
+```
+POST /ranking/exile
+```
+
+Exiliert einen Benutzer aus Ihrem Arbeitsbereich.
+
+**Parameter:**
+
+* `workspace_id` (ganze Zahl, erforderlich): Die ID Ihres Roblox-Arbeitsbereichs.
+* `Benutzername` (String, optional): Der Benutzername des Zielbenutzers.
+* User_id" (Ganzzahl, optional): Die Benutzer-ID des Zielbenutzers.
+* api-token" (String, erforderlich, Header): Ihr API-Token für die Authentifizierung.
+
+#### Ausruf
+
+```
+POST /utils/shout
+```
+
+Sendet eine Shout-Nachricht an Ihren Arbeitsbereich.
+
+**Parameter:**
+
+* `workspace_id` (ganze Zahl, erforderlich): Die ID Ihres Roblox-Arbeitsbereichs.
+* `shout_text` (String, erforderlich): Der Text der Schrei-Nachricht.
+* api-token" (String, erforderlich, Header): Ihr API-Token für die Authentifizierung.
+
+## Authentifizierung
+
+Alle API-Endpunkte benötigen ein API-Token für die Authentifizierung. Das Token sollte als Header mit dem Schlüssel `api-token` übergeben werden.
+
+## Antworten
+
+Bei einer erfolgreichen API-Anfrage wird ein Statuscode von 200 und eine JSON-Antwort zurückgegeben. Im Falle eines Validierungsfehlers wird ein Statuscode von 422 zusammen mit einer Fehlermeldung zurückgegeben.
+
+Weitere Informationen zur Verwendung unserer API finden Sie in den Beispielcodes weiter unten. Wir hoffen, dass RankGun's API Ihnen hilft, Ihren Roblox-Arbeitsbereich effektiv und effizient zu verwalten. Wenn Sie

@@ -1,0 +1,112 @@
+
+import { Callout } from 'nextra-theme-docs'
+
+
+# RankGun Python Package
+
+<Callout type="info" emoji="🤓">
+A Python package is typically a collection of modules that are related to each other. When a module from an external package is required in a program, that package can be imported and its modules can be put to use. RankGun is a Python package that provides an API client for the RankGun API.
+</Callout>
+
+## Installation
+
+To install RankGun, run the following command:
+
+```cmd
+pip install rankgun
+```
+
+After installing RankGun, you will be able to use its API client to interact with the RankGun API.
+
+## API Client
+
+The RankGun class is the main API client for the RankGun API. It takes two arguments: ``api_token`` & ``workspace_id``.
+
+Which **are** required for authentication with the RankGun API.
+
+### Methods
+
+The ``RankGun`` class provides the following methods to interact with the RankGun API.
+
+#### ``get_status()``
+
+This method returns the status of the RankGun API.
+
+```py
+async def get_status(self):
+    """Get the status of the RankGun API."""
+    endpoint = "/status"
+    return await self._get(endpoint)
+```
+
+This method promotes a user's rank by + 1.
+
+#### ``promote()``
+
+This method promotes a user's rank by +1.
+
+```py
+async def promote(self, username=None, User_Id=None):
+    """Promote a user. +1 rank"""
+    endpoint = "/ranking/promote"
+    params = {"workspace_id": self.workspace_id}
+
+    if username is not None:
+        params["username"] = username
+    elif User_Id is not None:
+        params["user_id"] = User_Id
+    return await self._post(endpoint, params=params)
+
+```
+
+
+#### ``demote()``
+
+This method demotes a user's rank by - 1.
+
+```py
+async def demote(self, username=None, User_Id=None):
+    """Demote a user. -1 Rank"""
+    endpoint = "/ranking/demote"
+    params = {"workspace_id": self.workspace_id}
+
+    if username is not None:
+        params["username"] = username
+    elif User_Id is not None:
+        params["user_id"] = User_Id
+    return await self._post(endpoint, params=params)
+```
+
+#### ``setrank()``
+
+This method sets the rank of a user to a specific value.
+
+```py
+async def setrank(self, rank, username=None, User_Id=None):
+    """Set the rank of a user. * Rank"""
+    endpoint = "/ranking/set-rank"
+    params = {"workspace_id": self.workspace_id, "rank": rank}
+
+    if username is not None:
+        params["username"] = username
+    elif User_Id is not None:
+        params["user_id"] = User_Id
+    return await self._post(endpoint, params=params)
+
+```
+
+#### ``exile(username=None, User_Id=None)``
+
+This method removes a player from a group.
+
+```py
+async def exile(self, username=None, User_Id=None):
+    """Removes players from group."""
+    endpoint = "/ranking/exile"
+    params = {"workspace_id": self.workspace_id}
+
+    if username is not None:
+        params["username"] = username
+    elif User_Id is not None:
+        params["user_id"]
+```
