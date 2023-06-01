@@ -1,6 +1,13 @@
 {
+  "name": "rankgun-docs",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
     "@geist-ui/core": "^2.3.8",
+    "@vercel/og": "^0.5.6",
     "next": "^13.3.0",
     "nextra": "^2.3.0",
     "nextra-theme-docs": "^2.3.0",
