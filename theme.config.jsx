@@ -1,5 +1,5 @@
 import React from 'react'
-import '@/styles/font.css'
+import './styles/font.css'
 
 export default {
   docsRepositoryBase: 'https://github.com/Noah-Haf/RankGunDocs/tree/main/',
