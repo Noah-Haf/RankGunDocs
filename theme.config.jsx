@@ -17,7 +17,7 @@ export default {
     <>
              <svg
         xmlns="http://www.w3.org/2000/svg"
-           width="130" height="130"
+           width="110" height="110"
         viewBox="0 0 456.8 98"
       >
         <path
