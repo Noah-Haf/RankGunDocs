@@ -74,7 +74,22 @@ export default {
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="RankGun Docs" />
-      <meta name="description" property="og:description" content="Learn & Grow with the knowledge from RankGun" />
+      <meta name="description" content="Learn & Grow with the knowledge from RankGun" />
+      <meta name="og:description" content="Learn & Grow with the knowledge from RankGun" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta httpEquiv="Content-Language" content="en" />
+      <meta
+        name="og:title"
+        content={
+          title
+            ? title + " — RankGun"
+            : "RankGun Docs"
+        }
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@Rank_Gun" />
+      <title>{title ? `${title} — RankGun` : "RankGun Docs"}</title>
       <meta
         name="og:image"
         content={`/api/og?title=${encodeURIComponent(title)}`}
@@ -82,6 +97,17 @@ export default {
       <meta
         name="twitter:image"
         content={`/api/og?title=${encodeURIComponent(title)}`}
+      />
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+							.nextra-sidebar-container li a {
+								border-radius: 1.5em !important;
+								padding-left: 12px !important;
+							}
+							
+						`,
+        }}
       />
     </>)
   },
