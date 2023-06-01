@@ -11,7 +11,7 @@ export default {
     title: "On this page",
     float: true,
   },
-  faviconGlyph: "🤓",
+  faviconGlyph: "🛑",
   logo: (
     <>
 

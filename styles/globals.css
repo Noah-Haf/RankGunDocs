@@ -13,3 +13,9 @@ body {
 		fixed 0 0 / 20px 20px radial-gradient(#313131 1px, transparent 0),
 		fixed 10px 10px / 20px 20px radial-gradient(#313131 1px, transparent 0);
 }
+
+div.block > pre {
+	border-radius: 0.375rem !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
