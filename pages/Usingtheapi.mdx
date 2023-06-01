@@ -20,7 +20,7 @@ If you ever wanted to see what different types of request you can send to RankGu
 
 **When you send a request to RankGun it should be by this script:**
 
-```
+```lua
 --1 Configuration
 local workspaceID = ""
 local apiToken = ""
@@ -64,7 +64,7 @@ The third few lines of code it basically sending the URL and the fourth is check
 When you are trying to get the player you want to rank, it must be in username form or UserID form.
 For example in my ranking commands script:
 
-```
+```lua
 if Words[1] == "!promote" then
 				local NameOfPlayerToRank = Words[2]
 
@@ -88,7 +88,7 @@ You aren't always going to use just the promote function so if you would like to
 When you want to use the SetRank function then you must add another variable which will be called "Rank" this will be the RankID that we want to rakn the player to.
 If you are adding this exact script - make sure to add the configurations (workspaceID, apiToken etc.) - those can be found in the promote script.
 
-```
+```lua
 	local url = "https://api.rankgun.works/ranking/set-rank?workspace_id="..workspaceID.."&rank="..tostring(Rank)..	"&username="..tostring(NameOfPlayerToRank)
 				local HttpService = game:GetService("HttpService")
 				local headers = {
