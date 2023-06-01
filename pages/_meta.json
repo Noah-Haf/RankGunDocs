@@ -1,6 +1,7 @@
 {
     "index": "Home",
     "python": "Python Package",
-    "api-docs": "API"
+    "api-docs": "API",
+    "apiguide": "API Guide",
     "thanks": "Thanks"
   }
