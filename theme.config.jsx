@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from 'next/head';
+
 
 
 export default {
@@ -14,7 +14,7 @@ export default {
   faviconGlyph: "🤓",
   logo: (
     <>
-        <Head>
+       
       <style jsx>{`
         @font-face {
           font-family: 'AftikaBold';
@@ -28,7 +28,7 @@ export default {
           /* Add other formats if available */
         }
       `}</style>
-    </Head>
+
        <svg
       xmlns="http://www.w3.org/2000/svg"
       width="110" height="110"
