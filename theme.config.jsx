@@ -17,7 +17,19 @@ export default {
   logo: (
     <>
       <Head>
-        <link rel="stylesheet" href="/styles/fonts.css" />
+        <style jsx>{`
+        @font-face {
+          font-family: 'AftikaBold';
+          src: url('/fonts/AftikaBold.ttf') format('truetype');
+
+        }
+
+        @font-face {
+          font-family: 'Aftika';
+          src: url('/fonts/Aftika.ttf') format('truetype');
+
+        }
+      `}</style>
       </Head>
       <svg
         xmlns="http://www.w3.org/2000/svg"
