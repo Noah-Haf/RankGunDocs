@@ -14,7 +14,28 @@ export default {
   },
   faviconGlyph: "🤓",
   logo: (
-    <strong>Documentation</strong>
+             <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 456.8 98"
+        className="svg-content"
+      >
+        <path
+          d="m64.3,0h-30.74c-3.1,0-6.06,1.27-8.32,3.38L3.38,25.24c-2.26,2.26-3.38,5.22-3.38,8.32v30.88c0,3.1,1.27,6.06,3.38,8.32l21.86,21.86c2.26,2.26,5.22,3.38,8.32,3.38h30.88c3.1,0,6.06-1.27,8.32-3.38l21.86-21.86c2.26-2.26,3.38-5.22,3.38-8.32v-30.88c0-3.1-1.27-6.06-3.38-8.32L72.62,3.38c-2.12-2.12-5.22-3.38-8.32-3.38h0Z"
+          fill="currentColor"
+        />
+        <text
+          transform="translate(132.5 75)"
+          style={{
+            fontFamily: 'AftikaBold, Aftika',
+            fontSize: '66px',
+            letterSpacing: '-.01em',
+          }}
+          fill="currentColor"
+        >
+          <tspan x="0" y="0">R</tspan>
+          <tspan x="46.05" y="0">ankGun</tspan>
+        </text>
+      </svg>
 
   ),
   feedback: {
