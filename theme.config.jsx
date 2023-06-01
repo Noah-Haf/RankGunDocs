@@ -3,6 +3,7 @@ import React from 'react'
 
 
 
+
 export default {
   docsRepositoryBase: 'https://github.com/Noah-Haf/RankGunDocs/tree/main/',
   sidebar: {
@@ -15,9 +16,12 @@ export default {
   faviconGlyph: "🤓",
   logo: (
     <>
-             <svg
+      <Head>
+        <link rel="stylesheet" href="/styles/fonts.css" />
+      </Head>
+      <svg
         xmlns="http://www.w3.org/2000/svg"
-           width="110" height="110"
+        width="110" height="110"
         viewBox="0 0 456.8 98"
       >
         <path
@@ -37,7 +41,7 @@ export default {
           <tspan x="46.05" y="0">ankGun</tspan>
         </text>
       </svg>
-</>
+    </>
 
   ),
   feedback: {
@@ -58,12 +62,12 @@ export default {
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="RankGun Docs" />
-      <meta  name="description" property="og:description" content="Learn & Grow with the knowledge from RankGun" />
+      <meta name="description" property="og:description" content="Learn & Grow with the knowledge from RankGun" />
     </>
   ),
   useNextSeoProps() {
     return {
-        titleTemplate: '%s – Docs'
+      titleTemplate: '%s – Docs'
     }
   }
 }
