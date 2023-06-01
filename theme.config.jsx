@@ -14,6 +14,7 @@ export default {
   },
   faviconGlyph: "🤓",
   logo: (
+    <>
              <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 456.8 98"
@@ -36,6 +37,7 @@ export default {
           <tspan x="46.05" y="0">ankGun</tspan>
         </text>
       </svg>
+</>
 
   ),
   feedback: {
