@@ -1,6 +1,5 @@
 import React from 'react'
-
-
+import Head from 'next/head';
 
 
 
@@ -17,19 +16,7 @@ export default {
   logo: (
     <>
       <Head>
-        <style jsx>{`
-        @font-face {
-          font-family: 'AftikaBold';
-          src: url('/fonts/AftikaBold.ttf') format('truetype');
-
-        }
-
-        @font-face {
-          font-family: 'Aftika';
-          src: url('/fonts/Aftika.ttf') format('truetype');
-
-        }
-      `}</style>
+        <link rel="stylesheet" href="/styles/fonts.css" />
       </Head>
       <svg
         xmlns="http://www.w3.org/2000/svg"
