@@ -1,5 +1,6 @@
 import React from 'react'
-import './styles/font.css'
+import Head from 'next/head';
+
 
 export default {
   docsRepositoryBase: 'https://github.com/Noah-Haf/RankGunDocs/tree/main/',
@@ -13,6 +14,21 @@ export default {
   faviconGlyph: "🤓",
   logo: (
     <>
+        <Head>
+      <style jsx>{`
+        @font-face {
+          font-family: 'AftikaBold';
+          src: url('/fonts/AftikaBold.ttf') format('truetype');
+          /* Add other formats if available */
+        }
+
+        @font-face {
+          font-family: 'Aftika';
+          src: url('/fonts/Aftika.ttf') format('truetype');
+          /* Add other formats if available */
+        }
+      `}</style>
+    </Head>
        <svg
       xmlns="http://www.w3.org/2000/svg"
       width="110" height="110"
