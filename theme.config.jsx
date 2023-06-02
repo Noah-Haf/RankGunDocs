@@ -26,6 +26,9 @@ export default {
       );
     },
   },
+  feedback: {
+    content="Have suggestions?"
+  },
   logo: (
     <>
 
