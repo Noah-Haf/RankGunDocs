@@ -6,6 +6,7 @@ export default {
   docsRepositoryBase: 'https://github.com/Noah-Haf/RankGunDocs/tree/main/',
   sidebar: {
     defaultMenuCollapseLevel: 1,
+    toggleButton: true,
   },
   toc: {
     title: "On this page",
