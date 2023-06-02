@@ -10,6 +10,20 @@ export default {
   toc: {
     title: "On this page",
     float: true,
+	  	extraContent: function ExtraTOCContent() {
+			return (
+				<div>
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 contrast-more:text-neutral-800 contrast-more:dark:text-neutral-50"
+						href="https://app.rankgun.works/"
+					>
+						Dashboard →
+					</a>
+				</div>
+			);
+		},
   },
   faviconGlyph: "🛑",
   logo: (
