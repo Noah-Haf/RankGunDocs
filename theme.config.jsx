@@ -26,7 +26,6 @@ export default {
       );
     },
   },
-  faviconGlyph: "🛑",
   logo: (
     <>
 
