@@ -86,7 +86,16 @@ export default {
     const { title } = useConfig().frontMatter;
 
     return (<>
-
+      <link
+        href="/favicon-light.ico"
+        rel="icon"
+        media="(prefers-color-scheme: light)"
+      />
+      <link
+        href="/favicon-dark.ico"
+        rel="icon"
+        media="(prefers-color-scheme: dark)"
+      />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="RankGun Docs" />
       <meta name="description" content="Learn & Grow with the knowledge from RankGun" />
