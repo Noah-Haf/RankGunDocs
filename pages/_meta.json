@@ -3,5 +3,9 @@
     "python": "Python Package",
     "api-docs": "API",
     "ApiGuide": "Api Guide",
-    "thanks": "Thanks"
+    "thanks": "Thanks",
+      "guides": {
+    "title": "Guides",
+    "type": "page"
+  },
   }
