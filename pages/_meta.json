@@ -1,10 +1,10 @@
 {
-    "index": "Home",
-    "python": "Python Package",
-    "api-docs": "API",
-    "thanks": "Thanks",
-    "guides": {
-        "title": "Guides",
-        "type": "page"
-    }
+  "guides": {
+    "title": "Guides",
+    "type": "page"
+  },
+  "docs": {
+    "title": "Documentation",
+    "type": "page"
+  }
 }
