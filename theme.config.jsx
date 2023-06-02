@@ -26,9 +26,6 @@ export default {
       );
     },
   },
-  feedback: {
-    content="Have suggestions?"
-  },
   logo: (
     <>
 
@@ -72,7 +69,8 @@ export default {
 
   ),
   feedback: {
-    content: null,
+    content: 'Question? Give us feedback →',
+    labels: 'feedback'
   },
   logoLink: "https://docs.rankgun.works/",
   project: {
