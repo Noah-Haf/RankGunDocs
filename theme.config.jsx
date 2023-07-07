@@ -86,6 +86,7 @@ export default {
 			</svg>
 		),
 	},
+	primaryHue: 256,
 	footer: {
 		text: (
 			<span>
