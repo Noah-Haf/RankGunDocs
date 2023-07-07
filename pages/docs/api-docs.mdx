@@ -6,10 +6,6 @@ import { Callout, Tab, Tabs } from "nextra-theme-docs";
 
 # API Documentation
 
-<Callout type="info" emoji="🤓">
-  An application programming interface (API) is a way for two or more computer
-  programs to communicate with each other.
-</Callout>
 
 Welcome to the RankGun API, the ultimate solution for managing ranks directly from Roblox Studio! Our API is designed to provide a seamless and efficient way to handle ranking operations within your Roblox workspace.
 
@@ -66,6 +62,7 @@ Set a specific rank for a user in your workspace.
 - `api-token` (string, required, header): Your API token for authentication.
 
 #### Exile
+##### 🔒 This is an elite only endpoint.
 
 ```
 POST /ranking/exile
@@ -81,6 +78,7 @@ Exile a user from your workspace.
 - `api-token` (string, required, header): Your API token for authentication.
 
 #### Shout
+##### 🔒 This is an elite only endpoint.
 
 ```
 POST /utils/shout
