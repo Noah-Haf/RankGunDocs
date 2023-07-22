@@ -1,8 +1,8 @@
 {
-  "helpcentre": {
-    "title": "Help Centre",
-    "type": "page"
-  },
+
+  "help": {
+    "title": "Help Center",
+   },
   "docs": {
     "title": "Documentation",
     "type": "page"
