@@ -1,7 +1,7 @@
 {
-
   "help": {
     "title": "Help Center",
+    "type": "page"
    },
   "docs": {
     "title": "Documentation",
