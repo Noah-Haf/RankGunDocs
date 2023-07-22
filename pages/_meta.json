@@ -1,6 +1,6 @@
 {
-  "guides": {
-    "title": "Guides",
+  "helpcenter": {
+    "title": "Help Center",
     "type": "page"
   },
   "docs": {
