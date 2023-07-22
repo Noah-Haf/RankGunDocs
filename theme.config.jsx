@@ -27,47 +27,28 @@ export default {
 	},
 	logo: (
 		<>
-			<style jsx>{`
-				@font-face {
-					font-family: "AftikaBold";
-					src: url("/fonts/AftikaBold.ttf") format("truetype");
-					/* Add other formats if available */
-				}
-
-				@font-face {
-					font-family: "Aftika";
-					src: url("/fonts/Aftika.ttf") format("truetype");
-					/* Add other formats if available */
-				}
-			`}</style>
-
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="110"
-				height="110"
-				viewBox="0 0 456.8 98"
-			>
-				<path
-					d="m64.3,0h-30.74c-3.1,0-6.06,1.27-8.32,3.38L3.38,25.24c-2.26,2.26-3.38,5.22-3.38,8.32v30.88c0,3.1,1.27,6.06,3.38,8.32l21.86,21.86c2.26,2.26,5.22,3.38,8.32,3.38h30.88c3.1,0,6.06-1.27,8.32-3.38l21.86-21.86c2.26-2.26,3.38-5.22,3.38-8.32v-30.88c0-3.1-1.27-6.06-3.38-8.32L72.62,3.38c-2.12-2.12-5.22-3.38-8.32-3.38h0Z"
-					fill="#7c24cc"
-				/>
-				<text
-					transform="translate(132.5 75)"
-					style={{
-						fontFamily: "AftikaBold, Aftika",
-						fontSize: "66px",
-						letterSpacing: "-.01em",
-					}}
-					fill="currentColor"
+			<div className="flex items-center space-x-2">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					version="1.0"
+					width="28px"
+					height="28px"
+					className="h-7 w-7"
+					viewBox="0 0 836.000000 836.000000"
+					preserveAspectRatio="xMidYMid meet"
 				>
-					<tspan x="0" y="0">
-						R
-					</tspan>
-					<tspan x="46.05" y="0">
-						ankGun
-					</tspan>
-				</text>
-			</svg>
+					<g
+						transform="translate(0.000000,836.000000) scale(0.100000,-0.100000)"
+						fill="#7C24CC"
+						stroke="none"
+					>
+						<path d="M2736 8339 c-193 -28 -364 -104 -518 -229 -40 -32 -503 -490 -1030 -1017 -863 -865 -962 -967 -1017 -1052 -64 -99 -111 -216 -139 -341 -15 -68 -17 -204 -17 -1510 0 -1139 3 -1448 13 -1500 30 -148 93 -296 178 -419 29 -41 418 -438 1033 -1053 894 -895 995 -992 1080 -1047 99 -64 216 -111 341 -139 68 -15 204 -17 1510 -17 1139 0 1448 3 1500 13 148 30 296 93 419 178 41 29 438 418 1053 1033 895 894 992 995 1047 1080 60 94 108 208 139 331 14 58 16 213 19 1470 3 956 0 1431 -7 1486 -26 200 -99 375 -218 522 -26 32 -485 493 -1019 1025 -839 834 -985 975 -1063 1026 -132 87 -279 140 -444 161 -100 12 -2774 11 -2860 -1z m1607 -2585 c83 -19 175 -58 244 -105 59 -39 1832 -1806 1913 -1906 289 -356 177 -878 -232 -1084 -190 -96 -443 -97 -631 -3 -29 15 -79 46 -112 69 -33 24 -348 332 -700 684 l-640 641 -670 -669 -670 -668 -95 -47 c-124 -60 -201 -79 -325 -79 -119 0 -211 20 -310 68 -179 86 -305 229 -371 420 -26 73 -28 93 -28 220 0 126 2 148 27 220 56 168 26 135 1012 1123 500 503 943 940 982 972 171 138 395 191 606 144z" />
+					</g>
+				</svg>
+				<span className="leading-0 translate-y-0.5 font-display text-xl tracking-tight text-neutral-800">
+					Rankgun
+				</span>
+			</div>
 		</>
 	),
 	feedback: {
@@ -102,7 +83,7 @@ export default {
 				<link
 					href="/favicon.ico"
 					rel="icon"
-	
+
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta property="og:title" content="RankGun Docs" />
