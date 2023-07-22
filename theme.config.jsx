@@ -27,6 +27,19 @@ export default {
 	},
 	logo: (
 		<>
+			<style jsx>{`
+				@font-face {
+					font-family: "AftikaBold";
+					src: url("/fonts/AftikaBold.ttf") format("truetype");
+					/* Add other formats if available */
+				}
+
+				@font-face {
+					font-family: "Aftika";
+					src: url("/fonts/Aftika.ttf") format("truetype");
+					/* Add other formats if available */
+				}
+			`}</style>
 			<div className="flex items-center space-x-2">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +96,7 @@ export default {
 				<link
 					href="/favicon.ico"
 					rel="icon"
-
+	
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta property="og:title" content="RankGun Docs" />
