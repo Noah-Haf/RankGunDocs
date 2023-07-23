@@ -55,7 +55,7 @@ export default {
 	},
 	logoLink: "https://docs.rankgun.works/",
 	project: {
-		link: "https://discord.gg/Nx8enrGXgk",
+		link: "https://discord.gg/ZR8FCfXDUv",
 		icon: (
 			<svg width="24" height="24" viewBox="0 0 127.14 96.36">
 				<path
