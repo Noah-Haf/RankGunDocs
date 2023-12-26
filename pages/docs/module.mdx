@@ -1,0 +1,32 @@
+---
+title: Roblox Module
+---
+
+
+
+
+# RankGun Module Script 
+
+<Callout type="error" emoji="️🚫">
+  NEVER expose your API key in scripts that are visible to the client. 
+</Callout>
+
+To simplify your experience, we've developed a module full of functionalities, including methods for promoting, setting ranks, and demoting. View the example script down below to get started: 
+
+```LUA
+--[[
+Example of how somebody can use the RankGun module for simple actions.
+
+Script will promote user, set rank and then demote.
+]]--
+
+Bot = require(15764237093)
+
+local myBot = Bot.new("UhKa56RKO7U0SzN5UbvVinWFYhIWlU", 1) --API KEY, WORKSPACE ID
+
+myBot:promote(4668712033)
+myBot:setRank(4668712033,2)
+local demotion = myBot:demote(4668712033)
+
+print(demotion)
+```
