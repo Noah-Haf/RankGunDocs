@@ -12,6 +12,8 @@ import { Callout } from 'nextra/components'
 
 To simplify your experience, we've developed a module full of functionalities, including methods for promoting, setting ranks, and demoting. View the example script down below to get started: 
 
+Feel free to contribute [here](https://github.com/Noah-Haf/RankGunRobloxModule).
+
 ```lua
 --[[
 Example of how somebody can use the RankGun module for simple actions.
@@ -19,13 +21,14 @@ Example of how somebody can use the RankGun module for simple actions.
 Script will promote user, set rank and then demote.
 ]]--
 
-Bot = require(15764237093)
+local module = require(15764237093)
 
-local myBot = Bot.new("UhKa56RKO7U0SzN5UbvVinWFYhIWlU", 1) --API KEY, WORKSPACE ID
+local myBot = module.Bot.new("UhKa56RKO7U0SzN5UbvVinWFYhIWlU", 1) --API KEY, WORKSPACE ID
 
 myBot:promote(4668712033)
 myBot:setRank(4668712033,2)
 local demotion = myBot:demote(4668712033)
 
 print(demotion)
+print(demotion.status_code)
 ```
