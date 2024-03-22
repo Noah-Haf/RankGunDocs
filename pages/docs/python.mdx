@@ -28,17 +28,6 @@ Which **are** required for authentication with the RankGun API.
 
 The ``RankGun`` class provides the following methods to interact with the RankGun API.
 
-#### ``get_status()``
-
-This method returns the status of the RankGun API.
-
-```py
-async def get_status(self):
-    """Get the status of the RankGun API."""
-    endpoint = "/status"
-    return await self._get(endpoint)
-```
-
 This method promotes a user's rank by + 1.
 
 #### ``promote()``
@@ -65,33 +54,38 @@ async def promote(self, username=None, User_Id=None):
 This method demotes a user's rank by - 1.
 
 ```py
-async def demote(self, username=None, User_Id=None):
-    """Demote a user. -1 Rank"""
-    endpoint = "/ranking/demote"
-    params = {"workspace_id": self.workspace_id}
+    async def demote(self, username=None, user_id=None):
+        """
+        Demotes a user. -1 Rank
+        """
+        data = {"workspace_id": self.workspace_id}
 
-    if username is not None:
-        params["username"] = username
-    elif User_Id is not None:
-        params["user_id"] = User_Id
-    return await self._post(endpoint, params=params)
+        if username is not None:
+            data["username"] = username
+        elif user_id is not None:
+            data["user_id"] = user_id
+
+        return request("POST", "/roblox/demote", data)
 ```
 
-#### ``setrank()``
+#### ``set_rank()``
 
 This method sets the rank of a user to a specific value.
 
 ```py
-async def setrank(self, rank, username=None, User_Id=None):
-    """Set the rank of a user. * Rank"""
-    endpoint = "/ranking/set-rank"
-    params = {"workspace_id": self.workspace_id, "rank": rank}
+    async def set_rank(self, rank, username=None, user_id=None):
+        """
+        Sets rank of a user
+        """
+        data = {"workspace_id": self.workspace_id, "rank": rank}
 
-    if username is not None:
-        params["username"] = username
-    elif User_Id is not None:
-        params["user_id"] = User_Id
-    return await self._post(endpoint, params=params)
+        if username is not None:
+            data["username"] = username
+        elif user_id is not None:
+            data["user_id"] = user_id
+
+        return request("POST", "/roblox/set-rank", data)
+
 
 ```
 
@@ -100,13 +94,32 @@ async def setrank(self, rank, username=None, User_Id=None):
 This method removes a player from a group.
 
 ```py
-async def exile(self, username=None, User_Id=None):
-    """Removes players from group."""
-    endpoint = "/ranking/exile"
-    params = {"workspace_id": self.workspace_id}
+    async def exile(self, username=None, user_id=None):
+        """
+        Exiles a user
+        """
+        data = {"workspace_id": self.workspace_id}
 
-    if username is not None:
-        params["username"] = username
-    elif User_Id is not None:
-        params["user_id"]
+        if username is not None:
+            data["username"] = username
+        elif user_id is not None:
+            data["user_id"] = user_id
+```
+
+#### ``shout(shout_text=string)``
+
+This method updates the group shout.
+
+```py
+    async def shout(self, shout_text):
+        """
+        Updates the shout of a group
+        """
+
+        return request(
+            "POST",
+            "/roblox/shout",
+            {"shout_text": shout_text, "workspace_id": self.workspace_id},
+        )
+
 ```
