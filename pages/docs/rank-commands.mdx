@@ -1,0 +1,69 @@
+---
+title: Rank Commands
+---
+
+import { FileTree } from 'nextra/components'
+
+# Rank Commands
+
+Rank Commands are a set of tools that allow you to perform ranking actions (promote, /demote) inside of your Roblox game.
+
+## Downloading 
+
+
+You can download the commands through **[this](https://docs.rankgun.works/assets/RankGunRobloxCommands.zip)** link.
+
+## Setup
+
+Unzip the folder, and put it inside Roblox Studio, and you will end up with something like this: 
+
+<FileTree>
+  <FileTree.Folder name="Workspace" defaultOpen>
+    <FileTree.Folder name="RankGunCommands">
+      <FileTree.File name="RG_RankCmd_Svr" />
+      <FileTree.File name="RG_RankCmd_SPS" />
+      <FileTree.File name="RG_RankCmd_RS" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
+
+
+You then should put each folder inside of ``RankGunCommands`` in its respective service: 
+
+<FileTree>
+  <FileTree.Folder name="ServerScriptService" defaultOpen>
+      <FileTree.Folder name="RG_RankCmd_Svr" />
+  </FileTree.Folder>
+  <FileTree.Folder name="StarterPlayerScripts" defaultOpen>
+      <FileTree.Folder name="RG_RankCmd_SPS" />
+  </FileTree.Folder>
+  <FileTree.Folder name="ReplicatedStorage" defaultOpen>
+      <FileTree.Folder name="RG_RankCmd_RS" />
+  </FileTree.Folder>
+</FileTree>
+
+## Configuration 
+
+
+To configure ranking commands open ``main`` and change lines 34-37. 
+
+```lua
+local GroupId = Your Group Id
+local MinimumRank = The minimum rank in your group that can use ranking commands
+local WorkspaceId = Your workspace id 
+local ApiKey = Your workspace API key
+```
+
+## Usage
+
+In Roblox chat you can use ``/promote`` or ``/demote`` followed by the user you want to promote or demote. 
+
+The commands have auto-completion so you can put the first couple of characters of the player you're trying to rank, the command will never rank somebody who is not in your game and will never rank more than one person per command. 
+
+Example usage: ``/promote Roblox``
+
+## Debugging 
+
+* Check the Roblox logs 
+* Ensure HTTPService is enabled
+* If all fails contact [RankGun support](https://app.rankgun.works/).
