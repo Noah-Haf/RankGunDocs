@@ -10,7 +10,7 @@ title: Python Package
 
 ## Installation
 
-To install RankGun, run the following command:
+To install the RankGun package, run the following command:
 
 ```cmd
 pip install rankgun
@@ -26,14 +26,26 @@ Which **are** required for authentication with the RankGun API.
 
 ### Methods
 
-The ``RankGun`` class provides the following methods to interact with the RankGun API.
+The ``RankGun`` class provides the following methods to interact with the RankGun API: 
+
+```python
+class RankGun:
+    """A client for the RankGun API."""
+
+    def __init__(self, api_token, workspace_id):
+        self.api_key = api_token
+        self.workspace_id = workspace_id
+        RequestsSession.headers.update(
+            {"api-token": api_token, "Content-Type": "application/json"}
+        )
+```
 
 
 #### ``promote()``
 
 This method promotes a user's rank by +1.
 
-```py
+```python
 async def promote(self, username=None, User_Id=None):
     """Promote a user. +1 rank"""
     endpoint = "/ranking/promote"
@@ -52,7 +64,7 @@ async def promote(self, username=None, User_Id=None):
 
 This method demotes a user's rank by - 1.
 
-```py
+```python
     async def demote(self, username=None, user_id=None):
         """
         Demotes a user. -1 Rank
@@ -71,7 +83,7 @@ This method demotes a user's rank by - 1.
 
 This method sets the rank of a user to a specific value.
 
-```py
+```python
     async def set_rank(self, rank, username=None, user_id=None):
         """
         Sets rank of a user
@@ -92,7 +104,7 @@ This method sets the rank of a user to a specific value.
 
 This method removes a player from a group.
 
-```py
+```python
     async def exile(self, username=None, user_id=None):
         """
         Exiles a user
@@ -109,7 +121,7 @@ This method removes a player from a group.
 
 This method updates the group shout.
 
-```py
+```python
     async def shout(self, shout_text):
         """
         Updates the shout of a group
@@ -122,3 +134,11 @@ This method updates the group shout.
         )
 
 ```
+
+## Examples
+
+Please check out an [example](https://github.com/Noah-Haf/RankGunPackage/tree/main) from our RankGun Package repo.
+
+## Contributions 
+
+Feel free to push any [contributions](https://github.com/Noah-Haf/RankGunPackage/tree/main) to the package.
